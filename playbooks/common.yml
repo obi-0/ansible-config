@@ -3,7 +3,10 @@
 - name: update lb server
   hosts: lb
   remote_user: ubuntu
-    - name: install httpd service
+  become: yes
+  become_user: root
+  tasks:
+    - name: ensure wireshark is at the latest version
       apt:
-        name: httpd
-        state: present
+        name: wireshark
+        state: latest
