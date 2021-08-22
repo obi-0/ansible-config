@@ -4,8 +4,7 @@
   hosts: webserver , nfs
   remote_user: ec2-user
   become: yes
-  become_method: sudo
-  become_user: nobody
+  become_user: ansible
   tasks:
     - name: ensure wireshark is at the latest version
       yum:
@@ -13,11 +12,10 @@
         state: latest
 
 - name: update LB , DB server
-  hosts: db , lb
+  hosts: lb, db
   remote_user: ubuntu
   become: yes
-  become_method: sudo
-  become_user: nobody
+  become_user: ansible
   tasks:
     - name: Update apt repo
       apt:
