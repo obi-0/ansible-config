@@ -1,6 +1,6 @@
 ---
 - name: update web, nfs servers
-  hosts: webservers, nfs
+  hosts: webserver, nfs
   remote_user: ec2-user
   become: yes
   become_user: root
@@ -18,7 +18,7 @@
   tasks:
     - name: delete wireshark      
       apt:
-        name:wireshark-qt
+        name: wireshark-qt
         state: absent
         autoremove: yes
         purge: yes
