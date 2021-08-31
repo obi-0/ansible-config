@@ -5,4 +5,11 @@
   import_playbook: ../static-assignment/uat-webservers.yml
   include: ../dynamic-assignments/env-vars.yml
   tags:
-    - always      
+    - always    
+
+
+---
+- import_playbook: --/static-assignments/common.yml
+- import_playbook: --/static-assignments/webservers.yml
+- import_playbook: --/static-assignments/mysql.yml    
+
