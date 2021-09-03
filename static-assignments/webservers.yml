@@ -1,5 +1,5 @@
 ---
  - host: webservers
-    roles:
-         - webserver
+   roles:
+      - webserver
     become: true   
