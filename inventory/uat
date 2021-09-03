@@ -14,7 +14,7 @@ lb
 
 [deployment:vars]
 ansible_user=ec2-user
-ansible_python_interpreter=/usr/libexec/platform-ansible_python_interpreter
+ansible_python_interpreter=/usr/libexec/platform-python
 ansible_ssh_private_key_file=~/.ssh/id_rsa
 
                                 
