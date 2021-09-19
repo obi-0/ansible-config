@@ -127,10 +127,10 @@ mysql_users:
     priv: '*.*:ALL,GRANT'
 
 mysql_users:
- - name: homestead
-   host: 172.31.7.0
-   password: sePret^i
-   priv: '*.*:ALL,GRANT'    
+  - name: homestead
+    host: 172.31.7.0
+    password: sePret^i
+    priv: '*.*:ALL,GRANT'    
 
 # Replication settings (replication is only enabled if master/user have values).
 mysql_server_id: "1"
